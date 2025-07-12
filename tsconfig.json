@@ -1,0 +1,15 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ESNext",         /* Ou "ES2019", "ES2020", etc. - A versão do JavaScript que o TS vai gerar. ESNext é o mais recente. */
+    "module": "ESNext",         /* Ou "CommonJS" - Como os módulos serão tratados. Para `import`/`export`, "ESNext" ou "ES2020" é o ideal. */
+    "moduleResolution": "node", /* Como o TS vai encontrar os módulos (normalmente "node" funciona bem). */
+    "esModuleInterop": true,    /* Importante para compatibilidade entre diferentes sistemas de módulos (Ex: CommonJS e ES Modules). */
+    "forceConsistentCasingInFileNames": true, /* Garante que você sempre use o mesmo case para nomes de arquivo. */
+    "strict": true,             /* Ativa um monte de checagens rigorosas - bom para evitar erros. */
+    "skipLibCheck": true       /* Pula a checagem de tipos em arquivos de biblioteca. */
+  },
+  "exclude": [
+    "node_modules"              /* Exclui a pasta node_modules da compilação. */
+  ]
+}
