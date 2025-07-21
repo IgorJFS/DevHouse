@@ -63,3 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
         p.textContent = `$${randomPrice}/Month`;
     });
 });
+
+function getRandomHouseCount(): number {
+    return Math.floor(Math.random() * (100 - 96 + 1)) + 96;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const houseCountElement = document.getElementById("house-count");
+    if (houseCountElement) {
+        const randomHouseCount = getRandomHouseCount();
+        houseCountElement.textContent = `${randomHouseCount} houses available`;
+    }
+});

@@ -31,7 +31,8 @@ function closeMenu() {
     const menu = document.getElementById("menu");
     menu.classList.add("hidden");
 }
-// Make functions globally accessible
+// Isso faz com que as funções sejam acessíveis globalmente
+// Isso é necessário para que o HTML possa chamar essas funções no JavaScript
 window.openMenu = openMenu;
 window.closeMenu = closeMenu;
 function getRandomNumber() {
@@ -43,4 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomPrice = getRandomNumber();
         p.textContent = `$${randomPrice}/Month`;
     });
+});
+function getRandomHouseCount() {
+    return Math.floor(Math.random() * (100 - 96 + 1)) + 96;
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const houseCountElement = document.getElementById("house-count");
+    if (houseCountElement) {
+        const randomHouseCount = getRandomHouseCount();
+        houseCountElement.textContent = `${randomHouseCount} houses available`;
+    }
 });
